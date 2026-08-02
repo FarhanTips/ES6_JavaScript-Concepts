@@ -18,14 +18,7 @@ const user2 = {
   name: "Habib",
   age: 45,
   "my address": "something",
-  something: [20, 30, 40, 500],
-//   company: {
-//     name: "Programming Hero",
-//     address: {
-//         location: "Mirpur DOHS",
-//         street: "something"
-//     }
-//   },
+  something: [20, 30, 40, 500]
 };
 
 //access property: Dot notation and bracket notation
@@ -36,9 +29,17 @@ const key = "company";
 // console.log(user["my address"]);
 
 
-// optional chaining
-// console.log(user.company.name, user.company.address.location);
-// console.log(user2?.company?.name, user2?.company?.address?.location);
+// optional chaining operator (?.)
+// এর কাজ হলো: যদি কোনো property না থাকে (null বা undefined হয়), তাহলে error না দিয়ে undefined return করবে। ?. মানে "যদি থাকে, তাহলে সামনে যাও; না থাকলে থেমে undefined দাও।" তাই Optional Chaining (?.)-এর মূল উদ্দেশ্য হলো nested object access করার সময় TypeError এড়ানো।
+
+// dot notation
+console.log(user.company.name, user.company.address.location);
+
+// optional chaining dot operation
+console.log(user2?.company?.name, user2?.company?.address?.location);
+
+// optional chaining bracket operation
+console.log(user2?.["my address"], user2?.["location-street"]?.["address"]?.["company name"]);
 
 
 
