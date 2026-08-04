@@ -56,7 +56,7 @@ console.log(myInfo);
 
 
 
-// myInfo is changed because primitive data-type passes the memory reference. So, mutate করলে original-এও পরিবর্তন হয়। এখানে object বদলাওনি, object-এর ভিতরের data বদলেছ। কিন্তু function এর ভিতর Reassign করলে original-এ পরিবর্তন হয় না।
+// myInfo is changed because primitive data-type passes the memory reference. So, mutate করলে original-এও পরিবর্তন হয়। এখানে object বদলিনি, object-এর ভিতরের data বদলেছি অর্থাৎ memory address same আছে কিন্তু অই memory address-এর ভিতরের data অথবা জিনিস-পত্র পরিবর্তন হয়েছে। কিন্তু function এর ভিতর Reassign করলে original-এ পরিবর্তন হয় না।
 
 
 
@@ -82,7 +82,7 @@ check2(teacher);
 console.log("Outside function, After returning from function-----------------------");
 console.log(teacher);
 
-// teacher-এ কোনো পরিবর্তন হয়নি কারণ function এর ভিতরে mutate করে নাই, direct re-assign করেছে। Function এর ভিতরে Reassign করলে original object পরিবর্তন হয় না।
+// teacher-এ কোনো পরিবর্তন হয়নি কারণ function এর ভিতরে mutate করে নাই, direct re-assign করেছে অর্থাৎ নতুন address আনা হয়েছে। Function এর ভিতরে Reassign করলে original object পরিবর্তন হয় না।
 
 
 
