@@ -14,5 +14,6 @@ let double = arr.map(function (elem){
 let triple = arr.map((elem) => elem * 3);
 console.log(arr);
 console.log(double);
+console.log(triple);
 
 
