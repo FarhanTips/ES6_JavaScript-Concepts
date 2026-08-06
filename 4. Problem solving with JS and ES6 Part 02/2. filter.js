@@ -25,6 +25,9 @@
 
 // map() : "তুমি যা return করবে, সেটাই নতুন array-এর element হবে।"
 // filter() : "তুমি যা return করবে, সেটা element হবে না; শুধু সিদ্ধান্ত নেবে element থাকবে নাকি বাদ যাবে।"
+
+// → পুরো array check করে।
+// → সব matching element নিয়ে নতুন array return করে.
 const getPassingStudents = (arrStudents, threshold) => {
     const filteredStudents = arrStudents.filter( (elem) => {
         return elem.marks >= threshold;
