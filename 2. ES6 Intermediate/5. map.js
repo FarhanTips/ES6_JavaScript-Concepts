@@ -2,6 +2,7 @@
 
 
 // map: to modify array elements and get new modified array. array এর each element change করে new array return.
+// map() : "তুমি যা return করবে, সেটাই নতুন array-এর element হবে।"
 
 let arr = [2,3,4,5,6];
 
