@@ -58,3 +58,52 @@ let info = {
     job: { title: "PM", department: "Product" } 
 };
 console.log(getEmployeeDept(info));
+
+
+
+// Task - 06
+const promoteEmployee = (employee, newTitle) =>{
+    // let newEmp = {...employee};
+    // newEmp.title = newTitle;
+    // return newEmp;
+
+    // OR
+    return {
+        ...employee,
+        title: newTitle
+    };
+};
+
+let info2 = { 
+    name: "Rafi", 
+    title: "Junior Dev" 
+};
+console.log(promoteEmployee(info2, "Senior Dev"));
+console.log(info2);
+
+
+
+
+// Task - 07
+const sumAllPrices = prices =>{
+    let sum = 0;
+    for (let price of prices){
+        sum += price;
+    }
+    return sum;
+}
+
+let arr1 = [100, 250, 75];
+console.log(sumAllPrices(arr1)); 
+
+
+
+
+// Task - 08
+const getManagerName = emp =>{
+    return emp.manager?.name;    //"আগে দেখো manager আছে কিনা। থাকলে তার name নাও। manager না থাকলে error না দিয়ে undefined দাও। manager না থাকলে আর সামনে যেও না।"
+}
+
+console.log(getManagerName({ name: "Mim", manager: { name: "Tanvir" } } ));
+console.log(getManagerName({ name: "Rafi" }  ));
+console.log(getManagerName({ name: "Rafi" , manager: { post: "GM" }}  ));
