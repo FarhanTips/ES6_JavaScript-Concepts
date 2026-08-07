@@ -91,7 +91,7 @@ const sumAllPrices = prices =>{
         sum += price;
     }
     return sum;
-}
+};
 
 let arr1 = [100, 250, 75];
 console.log(sumAllPrices(arr1)); 
@@ -102,8 +102,43 @@ console.log(sumAllPrices(arr1));
 // Task - 08
 const getManagerName = emp =>{
     return emp.manager?.name;    //"আগে দেখো manager আছে কিনা। থাকলে তার name নাও। manager না থাকলে error না দিয়ে undefined দাও। manager না থাকলে আর সামনে যেও না।"
-}
+};
 
 console.log(getManagerName({ name: "Mim", manager: { name: "Tanvir" } } ));
 console.log(getManagerName({ name: "Rafi" }  ));
 console.log(getManagerName({ name: "Rafi" , manager: { post: "GM" }}  ));
+
+
+
+
+
+// Task - 09
+
+const splitFirstRest = arr =>{
+    let [first, ...rest] = arr;
+    return {
+        first, 
+        rest
+    };
+};
+
+console.log(splitFirstRest([10, 20, 30, 40] ));
+
+
+
+
+// Task - 10
+const cloneAndUpdate = (arr, index, newValue) => {
+    const newArr = [...arr];
+    newArr[index] = newValue;
+
+    return newArr;
+};
+
+const original = [5, 10, 15];
+
+console.log(cloneAndUpdate(original, 1, 99));
+console.log(original);
+
+
+
