@@ -54,3 +54,50 @@ let products = [
 
 console.log(findProductByName(products, "Bag"));
 console.log(findProductByName([{ name: "Bold Pen", price: 12}], "Bag"));
+
+
+
+
+// Task - 04
+
+const getTotalStockValue = products =>{
+    return products.reduce( (acc, curr) => (acc + curr.price * curr.stock),0 );
+};
+
+console.log(getTotalStockValue([{ price: 50, stock: 4 }, { price: 20, stock: 10 }]  ));
+
+
+
+
+// Task - 05
+// const getDiscountedTotalForCategory = (products, category) => {
+//     return products.filter( elem => elem.category===category).reduce( (acc, curr) => (acc + curr.price),0) * 0.9;
+// };
+
+
+const getDiscountedTotalForCategory = (products, category) => {
+    return products
+        .filter(elem => elem.category === category)
+        .map(elem => elem.price * 0.9)
+        .reduce((acc, curr) => acc + curr, 0);
+};
+
+let products2 = [
+    { name: "Pen", 
+        category: "stationery", 
+        price: 100 
+    }, 
+    { 
+        name: "Bag",
+        category: "accessory", 
+        price: 500 
+    }, 
+    { 
+        name: "Notebook", 
+        category: "stationery", 
+        price: 60 
+    }
+];
+
+console.log(getDiscountedTotalForCategory(products2, "stationery"));
+
